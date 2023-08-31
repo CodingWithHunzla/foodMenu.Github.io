@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+
+:root {
+  --clr-gold: #e3b063;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(243, 241, 241);
+}
+
+.menu {
+  padding: 5rem 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.title h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.underline {
+  width: 5rem;
+  height: 0.2rem;
+  background: var(--clr-gold);
+  margin: 0 auto;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.filter-btn {
+  background: transparent;
+  padding: 5px 10px;
+  margin: 0 0.5rem;
+  border-radius: var(--radius);
+  border-color: #e3b063;
+  color: #d49537;
+  text-transform: capitalize;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background: #e3b063;
+  color: white;
+}
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  place-items: center;
+}
+.menu-item {
+  display: grid;
+  max-width: 25rem;
+  gap: 1rem 3rem;
+}
+.photo {
+  object-fit: cover;
+  height: 250px;
+  border-radius: var(--radius);
+  border: 3px solid var(--clr-gold);
+}
+.item-info {
+  padding-left: 1rem;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgb(150, 147, 147);
+}
+.item-info h3 {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: #cc9c55;
+}
+.item-info .item-text {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 760px) {
+  .menu-item {
+    grid-template-columns: 255px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
+  }
+}
